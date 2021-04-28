@@ -1,6 +1,6 @@
 ### Website URL
 
-https://reacttesttask.netlify.app
+https://react-quiz-ee32b8.netlify.app/
 
 ### `yarn start`
 
