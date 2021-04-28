@@ -1,25 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import { Route } from 'react-router-dom';
+import Wrapper from './components/shared/Wrapper.jsx';
+import QuizList from './containers/QuizList';
+import Quiz from './containers/Quiz';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Wrapper>
+      <Route exact path="/" component={QuizList} />
+      <Route path="/quiz/:id" component={Quiz} />
+    </Wrapper>
   );
-}
+};
 
 export default App;
